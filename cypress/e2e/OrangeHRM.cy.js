@@ -14,6 +14,7 @@ describe('template spec', () => {
     // Click on the dropdown to open it
 cy.get('div.filter-option-inner-inner').click();
 cy.get('#modal-save-button').click();  
+cy.get('').click();
 
   })
 })
