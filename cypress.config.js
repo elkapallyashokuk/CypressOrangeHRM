@@ -5,6 +5,7 @@ const webpack = require('@cypress/webpack-preprocessor')
 module.exports = defineConfig({
   e2e: {
     baseUrl: "https://testashok-trials79.orangehrmlive.com/",
+    
     setupNodeEvents(on, config) {
       on('file:preprocessor', webpack());
       allureWriter(on, config);
