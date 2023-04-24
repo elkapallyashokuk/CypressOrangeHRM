@@ -25,5 +25,6 @@ describe('OrangeHRM TEST', () => {
     it('Update Employee Details', () => {
         cy.get('#left_menu_item_1 > .main-menu-item-1 > span').click
 
+
     })
 })
