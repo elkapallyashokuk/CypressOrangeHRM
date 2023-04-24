@@ -4,27 +4,27 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    
+    "test": "npx cypress run --env allure=true",
     "testFiles": "cypress/e2e/OrangeHRM.cy.js",
-    "testType": "e2e",     
-    "test": "cypress open",
-    "chrome-execution": "npx cypress run --browser chrome --headed --spec cypress/e2e/OrangeHRM.cy.js",
+    "testType": "e2e",
+    "chrome-execution": "npx cypress run --browser chrome --headless --spec cypress/e2e/OrangeHRM.cy.js",
     "ui-regression": "cypress run --browser chrome --spec cypress/e2e/OrangeHRM.cy.js",
     "ui-regression-allure": "cypress run --browser chrome --spec cypress/e2e/OrangeHRM/**.js --env allure=true",
     "allure:clear": "rm -r allure-results/ allure-report cypress/screenshots || true",
     "trigger-test": "npx cypress run --spec  cypress/e2e/OrangeHRM.cy.js",
-    "allure:report": "allure generate allure-results --clean -o allure-report",
+    "report": "allure generate allure-results --clean -o allure-report",
     "allure-execution": "npm run trigger-test -- --browser=chrome --headed --env allure=true"
   },
   "author": "ashok",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^12.10.0",
     "minimatch": "^9.0.0"
   },
   "devDependencies": {
     "@cypress/webpack-preprocessor": "^5.17.0",
     "@shelex/cypress-allure-plugin": "^2.38.3",
+    "cypress": "^12.10.0",
+    "cypress-xpath": "^2.0.1",
     "mocha": "^10.2.0"
   }
 }
