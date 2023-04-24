@@ -23,3 +23,14 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+
+//-- This is a parent command --
+Cypress.Commands.add('login', (userName, password) => { 
+
+cy.visit('https://testashok-trials79.orangehrmlive.com/auth/login')
+cy.get('#txtUsername').type(userName);
+cy.get('#txtPassword').type(password);
+cy.get('button[type="submit"]').click();
+
+})
