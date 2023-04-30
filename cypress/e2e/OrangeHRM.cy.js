@@ -8,7 +8,7 @@ describe('OrangeHRM TEST', () => {
         cy.get('button[type="submit"]').click()
     })
 
-    it('Verify OrangHRM Login', () => {
+    it('Verify OrangeHRM Login', () => {
         // Login functionality is already tested in beforeEach hook
     })
 

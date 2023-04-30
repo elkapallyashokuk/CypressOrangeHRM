@@ -3,32 +3,22 @@ class LoginPage
 
     visit()
     {
-        cypress.visit("https://testashok-trials79.orangehrmlive.com/auth/login")
+        cy.visit("https://testashok-trials79.orangehrmlive.com/auth/login")
     }
-
-
-
-    fillUserID(value)
+    setUserName(userName)
     {
-        const feild=cy.get('#txtUsername')
-        feild.clear()
-        feild.type(value)
-        return this
+        cy.get('#txtUsername').type(userName)
+      }
+    setPassword(password)
+    {
+        cy.get('#txtPassword').type(password)
+
     }
-    fillPwd(value)
+    clickLogin()
     {
-        const feild=cy.get('#txtPassword')
-        feild.clear()
-        feild.type(value)
-        return this
-    }
-
-    login()
-    {
-      const button=cy.get('button[type="submit"]')
-        button.click()
+    cy.get('button[type="submit"]').click()
 
     }
     
 }
-export default LoginPage
+export default LoginPage;

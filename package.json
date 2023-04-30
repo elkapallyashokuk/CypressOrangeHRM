@@ -1,7 +1,6 @@
 {
   "name": "cypressautomation",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "npx cypress run --env allure=true",
@@ -9,7 +8,7 @@
     "testType": "e2e",
     "chrome-execution": "npx cypress run --browser chrome --headless --spec cypress/e2e/OrangeHRM.cy.js",
     "ui-regression": "cypress run --browser chrome --spec cypress/e2e/OrangeHRM.cy.js",
-    "ui-regression-allure": "cypress run --browser chrome --spec cypress/e2e/OrangeHRM/**.js --env allure=true",
+    "ui-regression-allure": "cypress run --browser chrome --spec cypress/e2e/OrangeHRM.cy.js --env allure=true",
     "allure:clear": "rm -r allure-results/ allure-report cypress/screenshots || true",
     "trigger-test": "npx cypress run --spec  cypress/e2e/OrangeHRM.cy.js",
     "report": "allure generate allure-results --clean -o allure-report",
@@ -26,5 +25,7 @@
     "cypress": "^12.10.0",
     "cypress-xpath": "^2.0.1",
     "mocha": "^10.2.0"
-  }
+  },
+  "keywords": [],
+  "description": ""
 }
